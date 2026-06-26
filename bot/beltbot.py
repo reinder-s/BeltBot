@@ -205,7 +205,7 @@ async def approval_handler(ctx, request_id, *, reason):
     await update_stats("belts_awarded")
 
 
-@BOT.command(name="reject")
+@BOT.command(name="deny")
 @requires_roles(["Staff", "Belt Reviewer", "BeltBotMaintainer"])
 async def rejection_handler(ctx, request_id, *, reason):
     request = await get_request(request_id)
